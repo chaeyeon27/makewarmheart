@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>따뜻한 마음 만들기</title>
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	<style type="text/css">
+		@font-face {
+	    font-family: 'MonoplexKR-Regular';
+	    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_Monoplex-kr@1.0/MonoplexKR-Regular.woff2') format('woff2');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+
+		@font-face {
+	    font-family: 'HancomUljuBangudae';
+	    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205-2@1.0/HancomUljuBangudae.woff2') format('woff2');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+
+		@font-face {
+    font-family: 'PyeongChangPeace-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+		body{
+			margin: 0 auto; 
+			background: black;
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		#start1, #start2{
+			text-align: center;
+			color: white;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			font-family: 'HancomUljuBangudae';
+			line-height: 170%;
+			opacity: 0;
+		}
+
+
+		@keyframes fadeinout{
+			0%{opacity: 0;}
+			20%{opacity: 1;}
+			80%{opacity: 1;}
+			100%{opacity: 0;}
+		}
+
+		.main{
+			position: absolute;
+			left: 0px;
+			top: 100px;
+			
+		}
+
+		.wood1, .wood2, .wood3, .wood4, .wood5{
+			display: flex;
+			flex-wrap: wrap;
+		    align-content: center;
+		    flex-direction: column-reverse;
+		    align-items: center;
+		}
+
+		#wood1ex,#wood2ex,#wood3ex,#wood4ex,#wood5ex{
+			font-family: 'MonoplexKR-Regular';
+		}
+		.wood1{
+			font-family: 'HancomUljuBangudae';
+			width: 100px;
+			height: 140px;
+			position: absolute;
+			left: 0px;
+			top: 200px;
+		
+			color: white;
+		}
+
+		#wood1ex{
+			width: 150px;
+			height: 60px;
+			left: -10px;
+			top: 130px;
+			position: absolute;
+			color: white;
+			text-align: center;
+			line-height: 140%;
+			letter-spacing: -3px;
+			border: 1px solid white;
+			border-radius: 70%;
+			padding-top: 10px;
+			color: white;
+			background: black;
+		}
+
+
+		.wood2{
+			font-family: 'HancomUljuBangudae';
+			width: 100px;
+			height: 140px;
+			position: absolute;
+			left: 346px;
+			top: 527px;
+			color: white;
+			
+		}
+
+		#wood2ex{
+			width: 180px;
+			height: 60px;
+			left: 346px;
+			top: 650px;
+			position: absolute;
+			text-align: center;
+			line-height: 140%;
+			letter-spacing: -3px;
+			border: 1px solid white;
+			border-radius: 70%;
+			padding-top: 22px;
+			color: white;
+			background: black;
+		}
+
+		.wood3{
+			font-family: 'HancomUljuBangudae';
+			width: 100px;
+			height: 140px;
+			position: absolute;
+			left: 723px;
+			top: 329px;
+			color: white;
+			
+		}
+
+		#wood3ex{
+			width: 200px;
+			height: 60px;
+			left: 723px;
+			top: 430px;
+			position: absolute;
+			text-align: center;
+			line-height: 140%;
+			letter-spacing: -3px;
+			border: 1px solid white;
+			border-radius: 70%;
+			padding-top: 22px;
+			color: white;
+			background: black;
+		}
+
+		.wood4{
+			font-family: 'HancomUljuBangudae';
+			width: 100px;
+			height: 160px;
+			position: absolute;
+			left: 670px;
+			top: 106px;
+			color: white;
+		}
+
+		#wood4ex{
+			width: 210px;
+			height: 60px;
+			left: 670px;
+			top: 240px;
+			position: absolute;
+			text-align: center;
+			line-height: 140%;
+			letter-spacing: -3px;
+			border: 1px solid white;
+			border-radius: 70%;
+			padding-top: 22px;
+			color: white;
+			background: black;
+		}
+
+		.wood5{
+			font-family: 'HancomUljuBangudae';
+			width: 100px;
+			height: 140px;
+			position: absolute;
+			left: -19px;
+			top: 392px;
+			color: white;
+			
+		}
+
+		#wood5ex{
+			width: 200px;
+			height: 60px;
+			left: -30px;
+			top: 480px;
+			position: absolute;
+			text-align: center;
+			line-height: 140%;
+			color: white;
+			letter-spacing: -3px;
+			border: 1px solid white;
+			border-radius: 70%;
+			padding-top: 22px;
+			background: black;
+
+		}
+
+		.fireplace{
+			width: 800px;
+			border-radius: 70%;
+			overflow: hidden;
+
+		}
+
+		.wood1img{
+			width: 120px;
+		}
+
+		#endcon{
+			display: none;
+		}
+
+		.endtext1, .endtext2{
+			width: 800px;
+			height: 120px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			background: white;
+			border-radius: 70%;
+			border: 1px solid orange;
+			font-size: 36px;
+		    z-index: 14;
+			font-family: 'HancomUljuBangudae';
+			font-weight: 100;
+			font-size: 28px;
+			text-align: center;
+			opacity: 0;
+			padding-top: 80px;
+			left: 50%;
+			top: 366px;
+
+		}
+
+
+		.mouseon{
+			margin: 0;
+			width: 300px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			z-index: 15;
+			color: white;
+			font-family: 'MonoplexKR-Regular';
+			font-weight: 100;
+			font-size: 24px;
+			letter-spacing: -3px;
+
+		}
+
+		#container1{
+			position: relative;
+			display: none;
+			margin: auto;
+			width: 800px;
+			
+
+		}
+
+		.yourbt{
+			width: 800px;
+			height: 120px;
+			position: absolute;
+			left: 50%;
+			top: 366px;
+			transform: translate(-50%, -50%);
+			background: white;
+			border-radius: 70%;
+			border: 1px solid orange;
+			font-size: 36px;
+		    z-index: 14;
+			font-family: 'HancomUljuBangudae';
+			font-weight: 100;
+			font-size: 28px;
+			text-align: center;
+			opacity: 0;
+			padding-top: 80px;	
+			display: none;
+
+		}
+
+		#explain{
+			text-align: center;
+			color: white;
+			font-size: 40px;
+			margin-top: 80px;
+			font-family: 'HancomUljuBangudae';
+		}
+
+		.yourtext{
+			font-size: 64px;
+			font-weight: 500;
+			text-align: center;
+			color: white;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			font-family: 'HancomUljuBangudae';
+			word-break: keep-all;
+		}
+
+		@keyframes fadein{
+			0%{opacity: 0;}
+			20%{opacity: 1;}
+			80%{opacity: 1;}
+			100%{opacity: 1;}
+		}
+
+		#sadSnd{
+			position: absolute;
+			left: 50%;
+			top: 20px;
+			transform: translate(-50%, 0%);
+			opacity: 0.8;
+		}
+
+		p{
+			text-align: center;
+			color: white;
+			padding-top: 100px;
+		}
+
+		.random{
+			width: 200px;
+			height: 200px;
+			color: white;
+			text-align: center;
+			font-size: 26px;
+			font-family: 'PyeongChangPeace-Light';
+			font-weight: 300;
+			padding: 10px 10px;
+			line-height: 200px;
+			border-radius: 50%;
+			border: 1px solid white;
+			position: absolute;
+			display: inline-block;
+			opacity: 0;
+			
+		}
+
+		@keyframes fadeout{
+			0%{opacity: 0;}
+			20%{opacity: 1;}
+			80%{opacity: 0;}
+			100%{opacity: 0; display: none;}
+
+		}
+
+		#startContainer{
+			margin: 0 auto;
+			position: relative;
+			height: 100vh;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="startContainer">
+	<div id="audio1"><audio src="happy.mp3" autoplay loop controls id="sadSnd">오디오 지원되지 않는 브라우저</audio>
+	<p>BGM이 있어요</p></div>
+	<h1 class="mouseon" id="mouseon">마우스를 올려주세요.</h1>
+	</div>
+	<h1 id="start1">이곳은 동글이의 마음속이에요. 너무 춥네요.</h1>
+	<h1 id="start2">동글이의 마음을 따뜻하게 만들어주실래요?</h1>
+<div id="container1">
+	<h1 id="explain">장작을 클릭해 마음을 따뜻하게 데워주세요</h1>
+	<div class="main"><img id="fireplace" class="fireplace" src="fireplace2.svg"></div>
+	<div class="wood1" id="wood1"><img src="wood1.png" class="wood1img">아침 장작</div>
+
+	<div class="wood2" id="wood2"><img src="wood2.png" class="wood1img">음식 장작</div>
+	<div class="wood3" id="wood3"><img src="wood3.png" class="wood1img">인생 장작</div>
+	<div class="wood4" id="wood4"><img src="wood4.png" class="wood1img">행복 장작</div>
+	<div class="wood5" id="wood5"><img src="wood5.png" class="wood1img">저녁 장작</div>
+	<div id="endcon">
+		
+			<div id="endtext1" class="endtext1">고마워요. 덕분에 동글이의 마음이 따뜻해졌어요. </div>
+			<div id="endtext2" class="endtext2">당신의 마음을 따뜻하게 만드는 것은 무엇인가요?
+			</div>
+			<div class="yourbt" id="yourBt">답변하기</div>
+	
+	</div>
+<!-- 	<div class="end2" id="end2">당신의 마음을 따뜻하게 만드는 것은 무엇인가요?</div> -->
+</div>
+
+
+
+	<script type="text/javascript">
+		
+		let start1 = document.getElementById("start1");
+		let start2 = document.getElementById("start2");
+
+		let mouseon = document.getElementById("mouseon");
+		startContainer.style.display = "block";
+		start2.style.display = "none";
+
+		mouseon.onmouseover = function(){
+		audio1.style.animation = "fadeinout 2s linear";
+		startContainer.style.display = "none";
+		audio1.style.display = "none";
+		mouseon.style.display = "none";
+		start2.style.display = "inline-block";
+		start1.style.animation = "fadeinout 3s linear";
+		start2.style.animation = "fadeinout 3s linear";
+		start2.style.animationDelay = "3s";}
+		
+		start2.onanimationend = function(){
+			start1.style.display = "none";
+			start2.style.display = "none";
+			container1.style.display = "block";
+		}
+
+
+// 질문1) div1이 나타나고 사라진 다음 바로 div2가 나타났으면 좋겠는데 (페이드인아웃) 어떻게 해야할까요...? 
+	  let endcon = document.getElementById("endcon");
+	  endcon.style.display = "none";
+
+		let but1 = false;
+		let but2 = false; 
+		let but3 = false; 
+		let but4 = false;
+		let but5 = false;
+
+		let wood1 =  document.getElementById("wood1");
+	
+// 내 함수로 바꿀 수 있는 방법 없을까...노가다.....
+// 마우스오버,마우스아웃이벤트
+	var container1 = document.getElementById("container1");
+
+		wood1.onmouseover = function(){
+			var w = document.createElement("div");
+			w.className = "wood1ex";
+			w.id = "wood1ex";
+			w.innerHTML = "아침 커피는 <br> 최고의 장작이죠";
+			container1.appendChild(w);
+		}
+
+		wood1.onmouseout = function(){
+			wood1ex.remove();
+		}
+// 
+		wood2.onmouseover = function(){
+			var w = document.createElement("div");
+			w.className = "wood2ex";
+			w.id = "wood2ex";
+			w.innerHTML = "길가다 먹는 붕어빵은 <br> 몸도 마음도 녹여요";
+			container1.appendChild(w);
+		}
+
+		wood2.onmouseout = function(){
+			wood2ex.remove();
+		}
+// 
+		wood3.onmouseover = function(){
+			var w = document.createElement("div");
+			w.className = "wood3ex";
+			w.id = "wood3ex";
+			w.innerHTML = "매일 부모님의 전화 한통은 <br> 외로움을 없애주죠";
+			container1.appendChild(w);
+		}
+
+		wood3.onmouseout = function(){
+			wood3ex.remove();
+		}
+// 
+		wood4.onmouseover = function(){
+			var w = document.createElement("div");
+			w.className = "wood4ex";
+			w.id = "wood4ex";
+			w.innerHTML = "보고만 있어도 행복한 <br> 우리집 막내 강아지!";
+			container1.appendChild(w);
+		}
+
+		wood4.onmouseout = function(){
+			wood4ex.remove();
+		}
+// 
+		wood5.onmouseover = function(){
+			var w = document.createElement("div");
+			w.className = "wood5ex";
+			w.id = "wood5ex";
+			w.innerHTML = "포근한 이불과 함께 잘 때 <br> 너무 행복해요";
+			container1.appendChild(w);
+		}
+
+		wood5.onmouseout = function(){
+			wood5ex.remove();
+		}
+
+// 질문2) 장작을 순서대로 클릭하지 않아도 5개 다 클릭하면 바뀌게 하고싶은데 어떻게 고쳐야할까요..? 
+// 클릭이벤트
+		wood1.onclick = function(){
+			alert("동글이가 제일 좋아하는 커피!");
+			
+			wood1.remove();
+			document.getElementById('fireplace').src = "fireplace.svg"
+			but1 = true;
+			judge2();
+			judge();
+			// setTimeout(function(){
+			// 	document.getElementById('fireplace').src = "fireplace2.svg"
+			// },1000)
+			// wood1ex.remove();
+		}
+
+		wood2.onclick = function(){
+			alert("붕어빵이 입에서 살살 녹네요. 동글이가 웃고 있어요.");
+			
+			wood2.remove();
+			document.getElementById('fireplace').src = "fireplace.svg"
+			but2 = true;
+			judge2();
+			judge();
+			// setTimeout(function(){
+			// 	document.getElementById('fireplace').src = "fireplace2.svg"
+			// },1080)
+		}
+
+		wood3.onclick = function(){
+			alert("부모님의 목소리를 듣고, 동글이가 울음을 그쳤어요.");
+			
+			wood3.remove();
+			document.getElementById('fireplace').src = "fireplace.svg"
+			but3 = true;
+			judge2();
+			judge();
+			// setTimeout(function(){
+			// 	document.getElementById('fireplace').src = "fireplace2.svg"
+			// },1000)
+		}
+
+		wood4.onclick = function(){
+			alert("강아지와 있으니 동글이가 밝아졌어요.");
+			
+			wood4.remove();
+			document.getElementById('fireplace').src = "fireplace.svg"
+			but4 = true;
+			judge2();
+			judge();
+			// setTimeout(function(){
+			// 	document.getElementById('fireplace').src = "fireplace2.svg"
+			// },1000)
+		}
+
+		wood5.onclick = function(){
+			alert("이불 밖은 위험해, 동글이가 좋아하는 말이에요.");
+			wood5.remove();
+			document.getElementById('fireplace').src = "fireplace.svg"
+			but5 = true;
+			judge2();
+			judge();
+		}
+			// setTimeout(function(){
+			// 	document.getElementById('fireplace').src = "fireplace2.svg"
+			// },1000)}
+			// document.getElementById('fireplace').src = "fireplace.svg"
+			// document.body.style.backgroundColor = "orange";
+			// var end1time = setTimeout(function(){
+			// 	endcon.style.display = "block";
+			// 	clearTimeout(end1time);
+			// },2000)}
+// prompt 입력값 받기
+			
+
+			let yourBt = document.getElementById("yourBt");
+			yourBt.onmouseover = function(){
+				yourBt.style.opacity = "0.4"
+
+			}
+			yourBt.onmouseout = function(){
+				yourBt.style.opacity = "1"
+			}
+			yourBt.onclick = function(){
+				  var yourText = prompt("당신의 마음을 따뜻하게 하는 것은? (8단어 이하)", "");
+				  container1.style.display = "none";
+				  document.body.style.backgroundColor = "orange";
+
+
+			var yourt = document.createElement("div");
+			var adj = checkBatchimEnding(yourText)?'이':'가';
+
+			yourt.className = "yourtext";
+			document.body.appendChild(yourt);
+			
+			yourt.textContent = "당신이 힘들 때 " + yourText + adj + " 당신의 마음을 녹여줄거예요";
+				yourt.style.animation = "fadein 2s linear";
+				wood1ex.style.display = "none";
+				wood2ex.style.display = "none";
+				wood3ex.style.display = "none";
+				wood4ex.style.display = "none";
+				wood5ex.style.display = "none";
+	
+			let interval = setInterval(ddd, 1000);
+			let random1 = 0;
+
+			function ddd(){
+			makerandomp();
+
+
+
+			function makerandomp(){
+			random1++; 
+			var random1 = document.createElement("div");
+			random1.innerHTML = yourText;
+			random1.className = "random";
+			random1.Id = "random" + random1;
+			random1.style.animation = "fadeout 2s linear";
+			
+			let wid = Math.random()*window.innerWidth - 50;
+			let hei = Math.random()*window.innerHeight - 50;
+			
+			random1.style.left = wid + "px";
+			random1.style.top = hei + "px";
+
+			document.body.appendChild(random1);
+
+			remove(random1);
+			
+			}
+		
+
+							
+			}
+
+			}
+
+			function judge2(){
+				if(!but1 || !but2 || !but3 || !but4 || !but5){
+					setTimeout(function(){document.getElementById('fireplace').src = "fireplace2.svg"},1000)}
+					var audio = new Audio('firesound.wav');
+					audio.play();
+				}
+
+			function judge(){
+				if(but1 && but2 && but3 && but4 && but5){document.getElementById('fireplace').src = "fireplace.svg" 
+					var audio = new Audio('firesound2.wav');
+					audio.play();
+					document.body.style.background = "url(changeback.png)";
+					document.body.style.backgroundSize = "cover";
+					document.getElementById('sadSnd').src = "sad.mp3"
+						endcon.style.display = "block";
+						endtext1.style.animation = "fadeinout 3s linear";
+						endtext2.style.animation = "fadeinout 3s linear";
+						endtext2.style.animationDelay = "4s";
+						
+
+					endtext2.onanimationend = function(){
+						endtext1.style.display = "none";
+						endtext2.style.display = "none";
+						yourBt.style.display = "block";
+						yourBt.style.opacity = "1";
+
+						var explain = document.getElementById("explain");
+						explain.innerHTML = "당신의 마음을 따뜻하게 하는 것은?";
+
+						
+						
+					}
+				}
+			}
+
+				function checkBatchimEnding(word) {
+  if (typeof word !== 'string') return null;
+ 
+  var lastLetter = word[word.length - 1];
+  var uni = lastLetter.charCodeAt(0);
+ 
+  if (uni < 44032 || uni > 55203) return null;
+ 
+  return (uni - 44032) % 28 != 0;
+}
+
+
+
+
+
+	</script>
+</body>
+</html>
